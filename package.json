@@ -1,0 +1,58 @@
+{
+  "name": "agents-sync-cli",
+  "version": "1.0.0",
+  "description": "Bidirectional sync between AGENTS.md (Codex/Cursor/Copilot) and CLAUDE.md / .claude/skills (Claude Code) — solves drift from GitHub Issue #6235",
+  "type": "module",
+  "bin": {
+    "agents-sync": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/cli.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "agents",
+    "claude",
+    "sync",
+    "markdown",
+    "codex",
+    "cursor",
+    "copilot",
+    "claude-code",
+    "cli",
+    "t3gg"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "chokidar": "^4.0.1",
+    "commander": "^12.1.0",
+    "diff": "^7.0.0",
+    "globby": "^14.0.2",
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/diff": "^7.0.1",
+    "@types/node": "^22.7.4",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.8"
+  }
+}

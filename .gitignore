@@ -1,0 +1,10 @@
+node_modules
+dist
+coverage
+.agents-sync.state.json
+*.log
+.DS_Store
+.env
+*.tgz
+.vscode
+.idea
